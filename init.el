@@ -92,7 +92,7 @@
 
 
 (require 'auto-save-buffers-enhanced)   ;git://github.com/kentaro/auto-save-buffers-enhanced.git
-(require 'color-theme)                  ;http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
+;; (require 'color-theme)                  ;http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
 (require 'coffee-mode)                  ;git://github.com/defunkt/coffee-mode.git
 (require 'php-mode)                     ;git://github.com/ejmr/php-mode.git
 (require 'haml-mode)                    ;git://github.com/nex3/haml-mode.git
