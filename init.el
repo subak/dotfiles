@@ -100,7 +100,7 @@
 (require 'highlight-indentation)        ;git://github.com/antonj/Highlight-Indentation-for-Emacs.git
 (require 'popup)                ;git://github.com/m2ym/popup-el.git
 (require 'auto-complete-config)         ;git://github.com/m2ym/auto-complete.git
-
+(require 'scala-mode)                   ;http://www.scala-lang.org/
 
 ;; オートセーブ
 (auto-save-buffers-enhanced t)
@@ -129,11 +129,7 @@
 ;; --------------------------------------------------------------------------------
 
 ;; javascript-mode
-(add-hook 'javascript-mode-hook '(setq js-indent-level 2))
-(add-hook 'javascript-mode
-          (lambda ()
-            (setq js-indent-level 2)
-            ))
+(setq js-indent-level 2)
 
 ;; ruby-mode
 (add-to-list 'auto-mode-alist '("/[Rr]akefile$" . ruby-mode))
