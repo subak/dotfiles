@@ -4,3 +4,4 @@
 !/lisp
 /lisp/*
 !/lisp/.gitkeep
+!/lisp/scala
