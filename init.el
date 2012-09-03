@@ -90,6 +90,8 @@
   (setq load-path (cons default-directory load-path))
   (normal-top-level-add-subdirs-to-load-path))
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/emacs-color-theme-solarized")
+(load-theme 'solarized-dark t)
 
 (require 'auto-save-buffers-enhanced)   ;git://github.com/kentaro/auto-save-buffers-enhanced.git
 ;; (require 'color-theme)                  ;http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz
