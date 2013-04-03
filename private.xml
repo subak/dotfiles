@@ -148,6 +148,11 @@
           <identifier>net.tk84.remap.mousemove</identifier>
           <autogen>--SimultaneousKeyPresses-- KeyCode::R, KeyCode::E, ModifierFlag::COMMAND_R, KeyCode::SPACE</autogen>
         </item>
+        <item>
+          <name>JIS Yen to Backslash</name>
+          <identifier>jp.subak.remap.jis_yen_to_backslash</identifier>
+          <autogen>__KeyToKey__ KeyCode::JIS_YEN, KeyCode::BACKSLASH</autogen>
+        </item>
       </list>
     </item>
   </list>
