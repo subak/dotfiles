@@ -4,6 +4,28 @@
     <appname>EVERNOTE</appname>
     <equal>com.evernote.Evernote</equal>
   </appdef>
+  <appdef>
+    <appname>TEXTMATE</appname>
+    <equal>com.macromates.TextMate.preview</equal>
+  </appdef>
+  <appdef>
+    <appname>INTELLIJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+  </appdef>
+  <replacementdef>
+    <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+    <replacementvalue>
+      ECLIPSE,
+      EMACS,
+      REMOTEDESKTOPCONNECTION,
+      TERMINAL,
+      VI,
+      VIRTUALMACHINE,
+      X11,
+      TEXTMATE,
+      INTELLIJ,
+    </replacementvalue>
+  </replacementdef>
   <list>
     <item>
       <name>ユーザー定義</name>
