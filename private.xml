@@ -177,6 +177,18 @@
           <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH</autogen>
         </item>
         <item>
+          <name>SHIFT_R+Functional Keys to F1..F12</name>
+          <identifier>remap.net_tk84_shift_r_customer_to_fkeysn</identifier>
+		  <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::SHIFT_R, KeyCode::F8</autogen>
+        </item>
+        <item>
+          <name>CONTROL_L+Functional Keys to F1..F12</name>
+          <identifier>remap.net_tk84_control_l_customer_to_fkeysn</identifier>
+		  <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::CONTROL_L, KeyCode::F8</autogen>
+		  <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_UP, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
+		  
+        </item>
+        <item>
           <name>JIS_BRACKET_RIGHT to CONTROL_R</name>
           <identifier>net.tk84.remap.jis_blacket_right_to_control_r</identifier>
           <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_RIGHT, KeyCode::CONTROL_R</autogen>
