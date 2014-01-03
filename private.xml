@@ -177,16 +177,36 @@
           <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH</autogen>
         </item>
         <item>
-          <name>SHIFT_R+Functional Keys to F1..F12</name>
-          <identifier>remap.net_tk84_shift_r_customer_to_fkeysn</identifier>
-		  <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::SHIFT_R, KeyCode::F8</autogen>
-        </item>
-        <item>
           <name>CONTROL_L+Functional Keys to F1..F12</name>
           <identifier>remap.net_tk84_control_l_customer_to_fkeysn</identifier>
-		  <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::CONTROL_L, KeyCode::F8</autogen>
-		  <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_UP, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
-		  
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, ModifierFlag::CONTROL_L, KeyCode::F1</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_UP, ModifierFlag::CONTROL_L, KeyCode::F2</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::EXPOSE_ALL, ModifierFlag::CONTROL_L, KeyCode::F3</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::DASHBOARD, ModifierFlag::CONTROL_L, KeyCode::F4</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, ModifierFlag::CONTROL_L, KeyCode::F5</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_HIGH, ModifierFlag::CONTROL_L, KeyCode::F6</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PREV, ModifierFlag::CONTROL_L, KeyCode::F7</autogen>            
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::CONTROL_L, KeyCode::F8</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_NEXT, ModifierFlag::CONTROL_L, KeyCode::F9</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_MUTE, ModifierFlag::CONTROL_L, KeyCode::F10</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_DOWN, ModifierFlag::CONTROL_L, KeyCode::F11</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_UP, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
+        </item>
+        <item>
+          <name>CONTROL_R+Functional Keys to F1..F12</name>
+          <identifier>remap.net_tk84_control_r_customer_to_fkeysn</identifier>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, ModifierFlag::CONTROL_R, KeyCode::F1</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_UP, ModifierFlag::CONTROL_R, KeyCode::F2</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::EXPOSE_ALL, ModifierFlag::CONTROL_R, KeyCode::F3</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::DASHBOARD, ModifierFlag::CONTROL_R, KeyCode::F4</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, ModifierFlag::CONTROL_R, KeyCode::F5</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_HIGH, ModifierFlag::CONTROL_R, KeyCode::F6</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PREV, ModifierFlag::CONTROL_R, KeyCode::F7</autogen>            
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::CONTROL_R, KeyCode::F8</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_NEXT, ModifierFlag::CONTROL_R, KeyCode::F9</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_MUTE, ModifierFlag::CONTROL_R, KeyCode::F10</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_DOWN, ModifierFlag::CONTROL_R, KeyCode::F11</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_UP, ModifierFlag::CONTROL_R, KeyCode::F12</autogen>
         </item>
         <item>
           <name>JIS_BRACKET_RIGHT to CONTROL_R</name>
