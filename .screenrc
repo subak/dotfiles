@@ -1,0 +1,24 @@
+startup_message off
+
+escape ^Zz
+
+shell -$SHELL
+
+# http://apple.stackexchange.com/questions/39608/running-gnu-screen-with-256-colors-on-os-x-lion
+term "screen-256color"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# http://d.hatena.ne.jp/edvakf/20110311/1299793959
+altscreen on
+
+bind 0 remove
+bind 2 split -v
+bind 3 split -h
+bind 'o' focus next
+bind 'O' focus prev
+bind ^b eval 'select 0' 'windowlist -g'
+
+layout new root
+
+screen -t root //group
+screen
