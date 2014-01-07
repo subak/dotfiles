@@ -12,8 +12,8 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 altscreen on
 
 bind 0 remove
-bind 2 split -v
-bind 3 split -h
+bind 2 split -h
+bind 3 split -v
 bind 'o' focus next
 bind 'O' focus prev
 bind ^b eval 'select 0' 'windowlist -g'
