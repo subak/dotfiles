@@ -12,6 +12,10 @@
     <keyboard-shortcut first-keystroke="meta Z" />
     <keyboard-shortcut first-keystroke="control MINUS" />
   </action>
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="meta F4" />
+    <keyboard-shortcut first-keystroke="meta W" />
+  </action>
   <action id="CodeCompletion" />
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="meta SLASH" />
@@ -63,6 +67,7 @@
     <keyboard-shortcut first-keystroke="ESCAPE" />
     <keyboard-shortcut first-keystroke="control G" />
   </action>
+  <action id="EditorIndentSelection" />
   <action id="EditorKillRegion">
     <keyboard-shortcut first-keystroke="control W" />
   </action>
@@ -117,10 +122,12 @@
   <action id="EditorScrollToCenter">
     <keyboard-shortcut first-keystroke="control L" />
   </action>
+  <action id="EditorSelectWord" />
   <action id="EditorSplitLine">
     <keyboard-shortcut first-keystroke="meta ENTER" />
     <keyboard-shortcut first-keystroke="control O" />
   </action>
+  <action id="EditorTab" />
   <action id="EditorTextEnd">
     <keyboard-shortcut first-keystroke="meta END" />
     <keyboard-shortcut first-keystroke="shift alt PERIOD" />
@@ -137,6 +144,10 @@
     <keyboard-shortcut first-keystroke="UP" />
     <keyboard-shortcut first-keystroke="control P" />
   </action>
+  <action id="EmacsStyleIndent">
+    <keyboard-shortcut first-keystroke="TAB" />
+  </action>
+  <action id="ExpandLiveTemplateByTab" />
   <action id="ExportToTextFile" />
   <action id="Find">
     <keyboard-shortcut first-keystroke="meta F" />
@@ -159,9 +170,12 @@
   <action id="GuiDesigner.CreateComponent">
     <keyboard-shortcut first-keystroke="control ENTER" />
   </action>
+  <action id="GuiDesigner.ExpandSelection" />
+  <action id="GuiDesigner.IncreaseIndent" />
   <action id="NewElement">
     <keyboard-shortcut first-keystroke="control ENTER" />
   </action>
+  <action id="NextParameter" />
   <action id="NextSplitter">
     <keyboard-shortcut first-keystroke="alt TAB" />
     <keyboard-shortcut first-keystroke="control X" second-keystroke="O" />
@@ -169,6 +183,10 @@
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="control RIGHT" />
     <keyboard-shortcut first-keystroke="shift meta CLOSE_BRACKET" />
+  </action>
+  <action id="NextTemplateParameter" />
+  <action id="NextTemplateVariable">
+    <keyboard-shortcut first-keystroke="ENTER" />
   </action>
   <action id="PrevSplitter">
     <keyboard-shortcut first-keystroke="shift alt TAB" />
