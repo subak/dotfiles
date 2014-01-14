@@ -12,6 +12,7 @@
     <keyboard-shortcut first-keystroke="meta Z" />
     <keyboard-shortcut first-keystroke="control MINUS" />
   </action>
+  <action id="ClassTemplateNavigation" />
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="meta F4" />
     <keyboard-shortcut first-keystroke="meta W" />
@@ -41,6 +42,10 @@
     <keyboard-shortcut first-keystroke="BACK_SPACE" />
     <keyboard-shortcut first-keystroke="shift BACK_SPACE" />
     <keyboard-shortcut first-keystroke="control H" />
+  </action>
+  <action id="EditorChooseLookupItem">
+    <keyboard-shortcut first-keystroke="ENTER" />
+    <keyboard-shortcut first-keystroke="control M" />
   </action>
   <action id="EditorCodeBlockEnd">
     <keyboard-shortcut first-keystroke="meta CLOSE_BRACKET" />
@@ -158,9 +163,15 @@
     <keyboard-shortcut first-keystroke="F3" />
     <keyboard-shortcut first-keystroke="meta G" />
   </action>
+  <action id="FindPrevious">
+    <keyboard-shortcut first-keystroke="shift F3" />
+    <keyboard-shortcut first-keystroke="shift control L" />
+    <keyboard-shortcut first-keystroke="shift meta G" />
+  </action>
   <action id="Generate">
     <keyboard-shortcut first-keystroke="control ENTER" />
   </action>
+  <action id="GoToClass" />
   <action id="GotoLine">
     <keyboard-shortcut first-keystroke="alt G" />
   </action>
