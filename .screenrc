@@ -11,6 +11,23 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 # http://d.hatena.ne.jp/edvakf/20110311/1299793959
 altscreen on
 
+defscrollback 8195
+
+zombie "q^M"
+
+autodetach on
+
+markkeys h=^b:l=^f:$=^e:^D=^V:^u=^[v
+
+bindkey -m ^[v stuff "^u" # [(M v)]
+bindkey -m ^v stuff "^d"  # [(C v)]
+bindkey -m ^[< stuff "g"  # [(M <)]
+bindkey -m ^[> stuff "G"  # [(M >)]
+bindkey -m ^[f stuff "w"  # [(M f)]
+bindkey -m ^[b stuff "b"  # [(M b)]
+bindkey -m "^ " stuff " " # [(C \ )]
+bindkey -m "^s" stuff "^a s" # [(C s)]
+
 bind 0 remove
 bind 2 split -h
 bind 3 split -v
