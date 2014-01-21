@@ -167,6 +167,12 @@
           <autogen>--KeyOverlaidModifier-- KeyCode::BACKSLASH, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
         </item>
         <item>
+          <name>RETURN to Control and RETURN</name>
+          <appendix>(+ When you type Return only, send Return)</appendix>
+          <identifier>remap.net_tk84_return_to_return</identifier>
+          <autogen>--KeyOverlaidModifier-- KeyCode::RETURN, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
+        </item>
+        <item>
           <name>JIS_UNDERSCORE to SHIFT_R</name>
           <identifier>remap.net_tk84_backquote_to_shift_r</identifier>
           <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, KeyCode::SHIFT_R</autogen>
