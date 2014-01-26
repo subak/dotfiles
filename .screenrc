@@ -31,6 +31,7 @@ bindkey -m ^[f stuff "w"  # [(M f)]
 bindkey -m ^[b stuff "b"  # [(M b)]
 bindkey -m "^ " stuff " " # [(C \ )]
 bindkey -m ^g stuff "^c"  # [(C g)]
+bindkey -m ^[w eval 'stuff " "' 'writebuf' # [(M w)]
 
 bind 0 remove
 bind 2 split -h
