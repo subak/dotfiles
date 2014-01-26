@@ -23,7 +23,6 @@
       VIRTUALMACHINE,
       X11,
       TEXTMATE,
-      INTELLIJ,
     </replacementvalue>
   </replacementdef>
   <list>
