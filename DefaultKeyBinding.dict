@@ -1,0 +1,49 @@
+{
+  "^m" = "insertNewline:";
+  
+  "~f" = "moveWordForward:";
+  "~b" = "moveWordBackward:";
+  "~d" = "deleteWordForward:";
+  
+  "~a" = "moveToBeginningOfParagraph:";
+  "~e" = "moveToEndOfParagraph:";
+  "~<" = "moveToBeginningOfDocument:";
+  "~>" = "moveToEndOfDocument:";
+
+  "^k" = (
+    "moveToEndOfParagraphAndModifySelection:",
+    "cut:"
+  );
+
+  "^y" = "paste:";
+
+  "~/" = "complete:";
+
+  "~v" = "pageUp:";
+ 
+  "^-" = "undo:";
+  "~-" = "redo:";  
+  "^_" = "undo:";
+  "^/" = "undo:";
+  "^g" = "abort:";
+
+  "~y" = "paste:";
+
+  "^~\\" = "indent:";
+
+  /* mark edit */
+  "^ "  = "setMark:";
+  "^\@" = "setMark:"; 
+  "^w" = (
+    "selectToMark:",
+    "cut:"
+  );
+  "~w" = (
+    "selectToMark:",
+    "copy:"
+  );
+
+  /* for IntellijIDEA */
+  "@`" = "orderFront:";
+  "~;" = "outline:";
+}
