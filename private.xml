@@ -33,22 +33,32 @@
           <name>TextMate</name>
           <list>
             <item>
-              <name>Show History</name>
+              <name>[(C M s v)] to [(C y)]</name>
+              <appendix>Edit->Paste->Show History</appendix>
               <identifier>jp.subak.remap.textmate.show_history</identifier>
               <only>TEXTMATE</only>
               <autogen>--KeyToKey-- KeyCode::Y, VK_OPTION | ModifierFlag::NONE, KeyCode::V, VK_CONTROL | VK_OPTION | VK_COMMAND</autogen>
             </item>
             <item>
-              <name>Cut to [(C w)]</name>
+              <name>[(C w)] to Cut</name>
               <identifier>jp.subak.remap.textmate.swap_cut</identifier>
               <only>TEXTMATE</only>
               <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL | ModifierFlag::NONE, KeyCode::X, VK_COMMAND</autogen>
             </item>
             <item>
-              <name>[C g] to [left]</name>
+              <name>[(C g)] to [left]</name>
+              <appendix>Text->Toggle Case of Character</appendix>
               <identifier>jp.subak.remap.textmate.cancel</identifier>
               <only>TEXTMATE</only>
               <autogen>--KeyToKey-- KeyCode::G, VK_CONTROL | ModifierFlag::NONE, KeyCode::CURSOR_LEFT</autogen>
+            </item>
+            <item>
+              <name>[(C w)] to [(C M w)]</name>
+              <appendix>Edit->Select->Word</appendix>
+              <appendix>~/Library/KeyBindings/DefaultKeyBinding.dictにて[(C M w)]を設定</appendix>
+              <identifier>jp.subak.remap.textmate.avoid_textmate_word_select</identifier>
+              <only>TEXTMATE</only>
+              <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL | ModifierFlag::NONE, KeyCode::W, VK_CONTROL, VK_OPTION</autogen>
             </item>
           </list>
         </item>
@@ -234,6 +244,46 @@
           <name>JIS Yen to Backslash</name>
           <identifier>jp.subak.remap.jis_yen_to_backslash</identifier>
           <autogen>__KeyToKey__ KeyCode::JIS_YEN, KeyCode::BACKSLASH</autogen>
+        </item>
+
+        <item>
+          <name>Emacs Mode</name>
+          <list>
+            <item>
+              <name>Control+P to Up</name>
+              <appendix>(when there are no other modifiers)</appendix>
+              <appendix>for Docker</appendix>
+              <identifier>jp.subak.remap.emacsmode_controlP</identifier>
+              <modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+                ModifierFlag::SHIFT_L,   ModifierFlag::SHIFT_R,
+              </modifier_not>
+              <autogen>__KeyToKey__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_UP</autogen>
+            </item>
+            <item>
+              <name>Control+H to Delete</name>
+              <appendix>(when there are no other modifiers)</appendix>
+              <identifier>jp.subak.remap.emacsmode_controlH</identifier>
+              <modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+                ModifierFlag::SHIFT_L,   ModifierFlag::SHIFT_R,
+              </modifier_not>
+              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE</autogen>
+            </item>
+            <item>
+              <name>Control+[ to Escape</name>
+              <appendix>(when there are no other modifiers)</appendix>
+              <identifier>jp.subak.remap.emacsmode_controlLeftbracket</identifier>
+              <modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+                ModifierFlag::SHIFT_L,   ModifierFlag::SHIFT_R,
+              </modifier_not>
+              <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::ESCAPE</autogen>
+            </item>
+          </list>
         </item>
       </list>
     </item>
