@@ -39,27 +39,6 @@
               <only>TEXTMATE</only>
               <autogen>--KeyToKey-- KeyCode::Y, VK_OPTION | ModifierFlag::NONE, KeyCode::V, VK_CONTROL | VK_OPTION | VK_COMMAND</autogen>
             </item>
-            <item>
-              <name>[(C w)] to Cut</name>
-              <identifier>jp.subak.remap.textmate.swap_cut</identifier>
-              <only>TEXTMATE</only>
-              <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL | ModifierFlag::NONE, KeyCode::X, VK_COMMAND</autogen>
-            </item>
-            <item>
-              <name>[(C g)] to [left]</name>
-              <appendix>Text->Toggle Case of Character</appendix>
-              <identifier>jp.subak.remap.textmate.cancel</identifier>
-              <only>TEXTMATE</only>
-              <autogen>--KeyToKey-- KeyCode::G, VK_CONTROL | ModifierFlag::NONE, KeyCode::CURSOR_LEFT</autogen>
-            </item>
-            <item>
-              <name>[(C w)] to [(C M w)]</name>
-              <appendix>Edit->Select->Word</appendix>
-              <appendix>~/Library/KeyBindings/DefaultKeyBinding.dictにて[(C M w)]を設定</appendix>
-              <identifier>jp.subak.remap.textmate.avoid_textmate_word_select</identifier>
-              <only>TEXTMATE</only>
-              <autogen>--KeyToKey-- KeyCode::W, VK_CONTROL | ModifierFlag::NONE, KeyCode::W, VK_CONTROL, VK_OPTION</autogen>
-            </item>
           </list>
         </item>
         <item>
