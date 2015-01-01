@@ -38,6 +38,10 @@
     "selectToMark:",
     "cut:"
   );
+  "^~w" = (
+    "selectToMark:",
+    "cut:"
+  );
   "~w" = (
     "selectToMark:",
     "copy:"
