@@ -12,6 +12,10 @@
     <appname>INTELLIJ</appname>
     <equal>com.jetbrains.intellij</equal>
   </appdef>
+  <appdef>
+    <appname>CHROME</appname>
+    <equal>com.google.Chrome</equal>
+  </appdef>
   <replacementdef>
     <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
     <replacementvalue>
@@ -38,6 +42,14 @@
               <identifier>jp.subak.remap.textmate.show_history</identifier>
               <only>TEXTMATE</only>
               <autogen>--KeyToKey-- KeyCode::Y, VK_OPTION | ModifierFlag::NONE, KeyCode::V, VK_CONTROL | VK_OPTION | VK_COMMAND</autogen>
+            </item>
+            <item>
+              <name>[(s t)] to [(M s n)]</name>
+              <appendix>Go->Go to File...</appendix>
+              <appendix>File->New Tab</appendix>
+              <identifier>jp.subak.remap.textmate.new_tab</identifier>
+              <only>TEXTMATE</only>
+              <autogen>--KeyToKey-- KeyCode::T, VK_COMMAND | ModifierFlag::NONE, KeyCode::N, VK_OPTION | VK_COMMAND</autogen>
             </item>
           </list>
         </item>
