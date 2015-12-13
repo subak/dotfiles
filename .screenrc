@@ -23,6 +23,8 @@ bufferfile '/tmp/screen-exchange'
 
 markkeys h=^b:l=^f:$=^e:^D=^V:^u=^[v
 
+# stuffは2ストロークキー
+# http://yskwkzhr.blogspot.jp/2011/12/master-copy-and-paste-of-gnu-screen.html
 bindkey -m ^[v stuff "^u" # [(M v)]
 bindkey -m ^v stuff "^d"  # [(C v)]
 bindkey -m ^[< stuff "g"  # [(M <)]
@@ -31,7 +33,7 @@ bindkey -m ^[f stuff "w"  # [(M f)]
 bindkey -m ^[b stuff "b"  # [(M b)]
 bindkey -m "^ " stuff " " # [(C \ )]
 bindkey -m ^g stuff "^c"  # [(C g)]
-bindkey -m ^[w eval 'stuff " "' 'writebuf' # [(M w)]
+bindkey -m ^[w eval 'stuff " "' 'writebuf' 'exec bash -c "cat /tmp/screen-exchange > /dev/tcp/localhost/49152"' # [(M w)]
 
 bind 0 remove
 bind 2 split -h
