@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>EVERNOTE</appname>
+    <equal>com.evernote.Evernote</equal>
+  </appdef>
+  <appdef>
+    <appname>TEXTMATE</appname>
+    <equal>com.macromates.TextMate.preview</equal>
+  </appdef>
+  <appdef>
+    <appname>INTELLIJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+  </appdef>
+  <appdef>
+    <appname>CHROME</appname>
+    <equal>com.google.Chrome</equal>
+  </appdef>
+  <replacementdef>
+    <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+    <replacementvalue>
+      ECLIPSE,
+      EMACS,
+      REMOTEDESKTOPCONNECTION,
+      TERMINAL,
+      VI,
+      VIRTUALMACHINE,
+      X11,
+      TEXTMATE,
+    </replacementvalue>
+  </replacementdef>
+  <list>
+    <item>
+      <name>ユーザー定義</name>
+      <list>
+        <item>
+          <name>TextMate</name>
+          <list>
+            <item>
+              <name>[(C M s v)] to [(C y)]</name>
+              <appendix>Edit->Paste->Show History</appendix>
+              <identifier>jp.subak.remap.textmate.show_history</identifier>
+              <only>TEXTMATE</only>
+              <autogen>--KeyToKey-- KeyCode::Y, VK_OPTION | ModifierFlag::NONE, KeyCode::V, VK_CONTROL | VK_OPTION | VK_COMMAND</autogen>
+            </item>
+            <item>
+              <name>[(s t)] to [(M s n)]</name>
+              <appendix>Go->Go to File...</appendix>
+              <appendix>File->New Tab</appendix>
+              <identifier>jp.subak.remap.textmate.new_tab</identifier>
+              <only>TEXTMATE</only>
+              <autogen>--KeyToKey-- KeyCode::T, VK_COMMAND | ModifierFlag::NONE, KeyCode::N, VK_OPTION | VK_COMMAND</autogen>
+            </item>
+          </list>
+        </item>
+        <item>
+          <name>Evernote</name>
+          <list>
+            <item>
+              <name>タブキーをスペース二つにする</name>
+              <identifier>net.tk84.remap.evernote.tab_to_space</identifier>
+              <only>EVERNOTE</only>
+              <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::NONE, KeyCode::SPACE, VK_SHIFT, KeyCode::SPACE, VK_SHIFT</autogen>
+            </item>
+          </list>
+        </item>
+        <item>
+          <name>GNU Emacs</name>
+          <list>
+            <item>
+              <name>一つ前のウィンドウへフォーカスを移す</name>
+              <appendix>[C S t] -> [(C c) (f4) (C a)]</appendix>
+              <appendix>other-window -1</appendix>
+              <appendix>TERMINAL,EMACS</appendix>
+              <identifier>net.tk84.remap.emacs.other-window -1</identifier>
+              <only>TERMINAL,EMACS</only>
+              <autogen>--KeyToKey-- KeyCode::T, VK_CONTROL | VK_SHIFT | ModifierFlag::NONE, KeyCode::C, VK_CONTROL, KeyCode::F4, KeyCode::A, VK_CONTROL</autogen>
+            </item>
+          </list>
+        </item>
+        <item>
+          <name>GNU Screen</name>
+          <list>
+            <item>
+              <appendix>このセクションはTerminal.appが対象</appendix>
+              <appendix>修飾キーの多いものから順番に書く必要がある</appendix>
+              <appendix>http://yskwkzhr.blogspot.com/2011/01/gnu-screen.html</appendix>
+              <appendix>http://shyouhei.tumblr.com/post/313410522/screenrc</appendix>
+            </item>
+            <item>
+              <name>前のウィンドウへ切り替える</name>
+              <appendix>prev</appendix>
+              <appendix>[(command \[)] -> [(C z) (C a) (C b)]</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.prev</identifier>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_COMMAND | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::B, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>次のウィンドウへ切り替える</name>
+              <appendix>next</appendix>
+              <appendix>[(command /])] -> [(C z) (C a) (C c)]</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.next</identifier>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT, VK_COMMAND | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::C, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>前のレイアウトへ切り替える</name>
+              <appendix>[(command {)] -> [(C z) (C a) (C d)]</appendix>
+              <appendix>layout prev</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.layout_prev</identifier>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::D, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>次のレイアウトへ切り替える</name>
+              <appendix>[(command })] -> [(C z) (C a) (C e)]</appendix>
+              <appendix>layout next</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.layout_next</identifier>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT,  VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::E, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>前のウィンドウへフォーカスを移す</name>
+              <appendix>focus prev</appendix>
+              <appendix>[(command C S t)] -> [(C z) (C a) (C f)]</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.focus_prev</identifier>
+              <autogen>--KeyToKey-- KeyCode::T, VK_COMMAND | VK_CONTROL | VK_SHIFT | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::F, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>次のウィンドウへフォーカスを移す</name>
+              <appendix>focus next</appendix>
+              <appendix>[(command C t)] -> [(C z) (C a) (C g)]</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.focus_next</identifier>
+              <autogen>--KeyToKey-- KeyCode::T, VK_COMMAND | VK_CONTROL | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::G, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>新しいレイアウトを開く</name>
+              <appendix>colon "source ~/.screen/layout/"</appendix>
+              <appendix>[(command t)] -> [(C z) (C a) (C i)]</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.layout_new</identifier>
+              <autogen>--KeyToKey-- KeyCode::T, VK_COMMAND | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::A, VK_CONTROL, KeyCode::I, VK_CONTROL</autogen>
+            </item>
+            <item>
+              <name>Markkeys (コピーモード)</name>
+              <appendix>copy</appendix>
+              <appendix>[(command escape)] -> [(C z) ([)]</appendix>
+              <appendix>[(command C \[)] -> [(C z) ([)]</appendix>
+              <only>TERMINAL</only>
+              <identifier>net.tk84.remap.screen.copy</identifier>
+              <autogen>--KeyToKey-- KeyCode::ESCAPE, VK_COMMAND | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::BRACKET_LEFT</autogen>
+              <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_COMMAND | VK_CONTROL | ModifierFlag::NONE, KeyCode::Z, VK_CONTROL, KeyCode::BRACKET_LEFT</autogen>
+            </item>
+          </list>
+        </item>
+        <item>
+          <name>RETURN to DELETE</name>
+          <identifier>remap.net_tk84_return_to_delete</identifier>
+          <autogen>--KeyToKey-- KeyCode::RETURN, KeyCode::DELETE</autogen>
+        </item>
+        <item>
+          <name>BACKSLASH to Control and RETURN</name>
+          <appendix>(+ When you type Backslash only, send Return)</appendix>
+          <identifier>remap.net_tk84_backslash_to_return</identifier>
+          <autogen>--KeyOverlaidModifier-- KeyCode::BACKSLASH, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
+        </item>
+        <item>
+          <name>RETURN to Control and RETURN</name>
+          <appendix>(+ When you type Return only, send Return)</appendix>
+          <identifier>remap.net_tk84_return_to_return</identifier>
+          <autogen>--KeyOverlaidModifier-- KeyCode::RETURN, KeyCode::CONTROL_R, KeyCode::RETURN</autogen>
+        </item>
+        <item>
+          <name>JIS_UNDERSCORE to SHIFT_R</name>
+          <identifier>remap.net_tk84_backquote_to_shift_r</identifier>
+          <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, KeyCode::SHIFT_R</autogen>
+        </item>
+        <item>
+          <name>JIS_UNDERSCORE to BACKSLASH</name>
+          <identifier>remap.net_tk84_jis_underscore_to_backslash</identifier>
+          <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, KeyCode::BACKSLASH</autogen>
+        </item>
+        <item>
+          <name>CONTROL_L+Functional Keys to F1..F12</name>
+          <identifier>remap.net_tk84_control_l_customer_to_fkeysn</identifier>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, ModifierFlag::CONTROL_L, KeyCode::F1</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_UP, ModifierFlag::CONTROL_L, KeyCode::F2</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::EXPOSE_ALL, ModifierFlag::CONTROL_L, KeyCode::F3</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::DASHBOARD, ModifierFlag::CONTROL_L, KeyCode::F4</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, ModifierFlag::CONTROL_L, KeyCode::F5</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_HIGH, ModifierFlag::CONTROL_L, KeyCode::F6</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PREV, ModifierFlag::CONTROL_L, KeyCode::F7</autogen>            
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::CONTROL_L, KeyCode::F8</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_NEXT, ModifierFlag::CONTROL_L, KeyCode::F9</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_MUTE, ModifierFlag::CONTROL_L, KeyCode::F10</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_DOWN, ModifierFlag::CONTROL_L, KeyCode::F11</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_UP, ModifierFlag::CONTROL_L, KeyCode::F12</autogen>
+        </item>
+        <item>
+          <name>CONTROL_R+Functional Keys to F1..F12</name>
+          <identifier>remap.net_tk84_control_r_customer_to_fkeysn</identifier>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_DOWN, ModifierFlag::CONTROL_R, KeyCode::F1</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::BRIGHTNESS_UP, ModifierFlag::CONTROL_R, KeyCode::F2</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::EXPOSE_ALL, ModifierFlag::CONTROL_R, KeyCode::F3</autogen>
+            <autogen>__ConsumerToKey__ KeyCode::DASHBOARD, ModifierFlag::CONTROL_R, KeyCode::F4</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_LOW, ModifierFlag::CONTROL_R, KeyCode::F5</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::KEYBOARDLIGHT_HIGH, ModifierFlag::CONTROL_R, KeyCode::F6</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PREV, ModifierFlag::CONTROL_R, KeyCode::F7</autogen>            
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_PLAY, ModifierFlag::CONTROL_R, KeyCode::F8</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::MUSIC_NEXT, ModifierFlag::CONTROL_R, KeyCode::F9</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_MUTE, ModifierFlag::CONTROL_R, KeyCode::F10</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_DOWN, ModifierFlag::CONTROL_R, KeyCode::F11</autogen>
+            <autogen>__ConsumerToKey__ ConsumerKeyCode::VOLUME_UP, ModifierFlag::CONTROL_R, KeyCode::F12</autogen>
+        </item>
+        <item>
+          <name>JIS_BRACKET_RIGHT to CONTROL_R</name>
+          <identifier>net.tk84.remap.jis_blacket_right_to_control_r</identifier>
+          <autogen>--KeyToKey-- KeyCode::JIS_BRACKET_RIGHT, KeyCode::CONTROL_R</autogen>
+        </item>
+        <item>
+          <name>Switch</name>
+          <appendix>under score to ctrl</appendix>
+          <identifier>net.tk84.remap.jis_underscore_to_control_r</identifier>
+          <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, KeyCode::CONTROL_R</autogen>
+        </item>
+        <item>
+          <name>Mouse</name>
+          <appendix>mouse move</appendix>
+          <identifier>net.tk84.remap.mousemove</identifier>
+          <autogen>--SimultaneousKeyPresses-- KeyCode::R, KeyCode::E, ModifierFlag::COMMAND_R, KeyCode::SPACE</autogen>
+        </item>
+        <item>
+          <name>JIS Yen to Backslash</name>
+          <identifier>jp.subak.remap.jis_yen_to_backslash</identifier>
+          <autogen>__KeyToKey__ KeyCode::JIS_YEN, KeyCode::BACKSLASH</autogen>
+        </item>
+
+        <item>
+          <name>Emacs Mode</name>
+          <list>
+            <item>
+              <name>Control+P to Up</name>
+              <appendix>(when there are no other modifiers)</appendix>
+              <appendix>for Docker</appendix>
+              <identifier>jp.subak.remap.emacsmode_controlP</identifier>
+              <modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+                ModifierFlag::SHIFT_L,   ModifierFlag::SHIFT_R,
+              </modifier_not>
+              <autogen>__KeyToKey__ KeyCode::P, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_UP</autogen>
+            </item>
+            <item>
+              <name>Control+H to Delete</name>
+              <appendix>(when there are no other modifiers)</appendix>
+              <identifier>jp.subak.remap.emacsmode_controlH</identifier>
+              <modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+                ModifierFlag::SHIFT_L,   ModifierFlag::SHIFT_R,
+              </modifier_not>
+              <autogen>__KeyToKey__ KeyCode::H, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE</autogen>
+            </item>
+            <item>
+              <name>Control+[ to Escape</name>
+              <appendix>(when there are no other modifiers)</appendix>
+              <identifier>jp.subak.remap.emacsmode_controlLeftbracket</identifier>
+              <modifier_not>
+                ModifierFlag::COMMAND_L, ModifierFlag::COMMAND_R,
+                ModifierFlag::OPTION_L,  ModifierFlag::OPTION_R,
+                ModifierFlag::SHIFT_L,   ModifierFlag::SHIFT_R,
+              </modifier_not>
+              <autogen>__KeyToKey__ KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::ESCAPE</autogen>
+            </item>
+          </list>
+        </item>
+      </list>
+    </item>
+  </list>
+</root>
