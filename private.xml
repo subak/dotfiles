@@ -16,6 +16,10 @@
     <appname>CHROME</appname>
     <equal>com.google.Chrome</equal>
   </appdef>
+  <appdef>
+      <appname>RDP</appname>
+      <equal>com.microsoft.rdc.mac</equal> 
+  </appdef>
   <replacementdef>
     <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
     <replacementvalue>
@@ -61,6 +65,17 @@
               <identifier>net.tk84.remap.evernote.tab_to_space</identifier>
               <only>EVERNOTE</only>
               <autogen>--KeyToKey-- KeyCode::TAB, ModifierFlag::NONE, KeyCode::SPACE, VK_SHIFT, KeyCode::SPACE, VK_SHIFT</autogen>
+            </item>
+          </list>
+        </item>
+        <item>
+          <name>Microsoft Remote Desktop</name>
+          <list>
+            <item>
+                <name>Fix Backquote and Tilde input</name>
+                <identifier>private.remotedesktopswapbackquote</identifier>
+                <only>RDP</only>
+                <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::DANISH_DOLLAR</autogen>
             </item>
           </list>
         </item>
