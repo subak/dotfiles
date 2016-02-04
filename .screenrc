@@ -1,6 +1,6 @@
 startup_message off
 
-escape ^Zz
+escape ^tt
 
 shell -$SHELL
 
