@@ -77,6 +77,12 @@
                 <only>RDP</only>
                 <autogen>__KeyToKey__ KeyCode::DELETE, KeyCode::DANISH_DOLLAR</autogen>
             </item>
+            <item>
+              <name>Fix Backquote and Tilde input (Magic Keyboard)</name>
+              <identifier>private.remotedesktopswapbackquote.magickeyboard</identifier>
+              <only>RDP</only>
+              <autogen>__KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DANISH_DOLLAR</autogen>
+            </item>
           </list>
         </item>
         <item>
