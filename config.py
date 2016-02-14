@@ -40,14 +40,14 @@ def configure(keymap):
     keymap_global["C-U0-J"] = keymap.MouseMoveCommand(0,36)
 
     # mouse button
-    keymap_global["D-U0-V"] = keymap.MouseButtonDownCommand('left')
-    keymap_global["U-U0-V"] = keymap.MouseButtonUpCommand('left')
-    keymap_global["D-U0-B"] = keymap.MouseButtonDownCommand('left')
-    keymap_global["U-U0-B"] = keymap.MouseButtonUpCommand('left')
     keymap_global["D-U0-Space"] = keymap.MouseButtonDownCommand('left')
     keymap_global["U-U0-Space"] = keymap.MouseButtonUpCommand('left')
-    keymap_global["D-U0-N"] = keymap.MouseButtonDownCommand('right')
-    keymap_global["U-U0-N"] = keymap.MouseButtonUpCommand('right')
+    keymap_global["D-C-U0-Space"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-C-U0-Space"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-N"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-U0-N"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-M"] = keymap.MouseButtonDownCommand('right')
+    keymap_global["U-U0-M"] = keymap.MouseButtonUpCommand('right')
 
     # mouse scroll
     keymap_global["S-U0-H"] = keymap.MouseHorizontalWheelCommand(-2.0)
@@ -77,9 +77,10 @@ def configure(keymap):
     # control
     keymap_global["U0-Z"] = "C-Z"
     keymap_global["U0-T"] = "C-T"
+    keymap_global["U0-X"] = "A-X" # for inttelij
 
     def isConsole(wnd):
-        if wnd.getProcessName() in ("MobaXterm.exe")
+        if wnd.getProcessName() in ("MobaXterm.exe"):
             return True
         return False
 
@@ -87,21 +88,22 @@ def configure(keymap):
         return not isConsole(wnd)
 
     keymap_win32 = keymap.defineWindowKeymap( check_func=isNotConsole )
-    keymap_win32["C-A"] = "Home"
-    keymap_win32["C-E"] = "End"
+    keymap_win32["RC-A"] = "Home"
+    keymap_win32["RC-E"] = "End"
     keymap_win32["S-C-A"] = "S-Home"
     keymap_win32["S-C-E"] = "S-End"
-    keymap_win32["C-K"] = "S-End","C-X"
-    keymap_win32["C-Y"] = "C-V"
+    keymap_win32["RC-K"] = "S-End","C-X"
+    keymap_win32["RC-Y"] = "C-V"
+    keymap_win32["A-W"] = "C-C"
+    keymap_win32["RC-W"] = "C-X"
     keymap_win32["A-F"] = "C-Right"
     keymap_win32["A-B"] = "C-Left"
     keymap_win32["S-A-F"] = "S-C-Right"
     keymap_win32["S-A-B"] = "S-C-Left"
-    keymap_win32["C-V"] = "PageDown"
+    keymap_win32["RC-V"] = "PageDown"
     keymap_win32["A-V"] = "PageUp"
-    keymap_win32["C-Minus"] = "C-Z"
-    keymap_win32["A-W"] = "C-C"
-    keymap_win32["C-W"] = "C-X"
+    keymap_win32["RC-Minus"] = "C-Z"
+    keymap_win32["RC-X"] = "LA-X"
 
 
     # --------------------------------------------------------------------
