@@ -34,94 +34,109 @@ def configure(keymap):
     # --------------------------------------------------------------------
 
     keymap.replaceKey("RAlt","LAlt")
-    
-    keymap.replaceKey("CapsLock","RCtrl")
-    keymap.defineModifier("RCtrl","User0")
 
-    keymap.defineModifier("3","User1")
-    keymap.defineModifier("2","User2")
-    keymap.defineModifier("4","User3")
+    keymap.defineModifier("Enter", "User0");
+
+#    keymap.defineModifier("3","User1")
+#    keymap.defineModifier("2","User2")
+#    keymap.defineModifier("4","User3")
 
     keymap_global = keymap.defineWindowKeymap()
 
-    keymap_global["O-2"] = "2"
-    keymap_global["O-3"] = "3"
-    keymap_global["O-4"] = "4"
-    keymap_global["S-2"] = keymap.InputTextCommand("@")
-    keymap_global["S-3"] = keymap.InputTextCommand("$")
-    keymap_global["S-4"] = keymap.InputTextCommand("#")
+    keymap_global["O-Enter"] = "Enter"
+#    keymap_global["O-2"] = "2"
+#    keymap_global["O-3"] = "3"
+#    keymap_global["O-4"] = "4"
+#    keymap_global["S-2"] = keymap.InputTextCommand("@")
+#    keymap_global["S-3"] = keymap.InputTextCommand("$")
+#    keymap_global["S-4"] = keymap.InputTextCommand("#")
 
-    keymap_global["U0-P"] = "Up"
-    keymap_global["U0-N"] = "Down"
-    keymap_global["U0-F"] = "Right"
-    keymap_global["U0-B"] = "Left"
-    keymap_global["U0-OpenBracket"] = "Esc"
-    keymap_global["U0-H"] = "Back"
-    keymap_global["U0-D"] = "Delete"
-    keymap_global["U0-M"] = "Enter"
+    keymap_global["RC-P"] = "Up"
+    keymap_global["RC-N"] = "Down"
+    keymap_global["RC-F"] = "Right"
+    keymap_global["RC-B"] = "Left"
+    keymap_global["S-RC-P"] = "S-Up"
+    keymap_global["S-RC-N"] = "S-Down"
+    keymap_global["S-RC-F"] = "S-Right"
+    keymap_global["S-RC-B"] = "S-Left"
+    keymap_global["RC-OpenBracket"] = "Esc"
+    keymap_global["RC-H"] = "Back"
+    keymap_global["RC-D"] = "Delete"
+    keymap_global["RC-M"] = "Enter"
 
-    keymap_global["S-U0-P"] = "S-Up"
-    keymap_global["S-U0-N"] = "S-Down"
-    keymap_global["S-U0-F"] = "S-Right"
-    keymap_global["S-U0-B"] = "S-Left"
+    keymap_global["U0-H"] = keymap.MouseMoveCommand(-12,0);
+    keymap_global["U0-L"] = keymap.MouseMoveCommand(12,0);
+    keymap_global["U0-K"] = keymap.MouseMoveCommand(0,-12)
+    keymap_global["U0-J"] = keymap.MouseMoveCommand(0,12)
 
-    keymap_global["U1-H"] = keymap.MouseMoveCommand(-12,0);
-    keymap_global["U1-L"] = keymap.MouseMoveCommand(12,0);
-    keymap_global["U1-K"] = keymap.MouseMoveCommand(0,-12)
-    keymap_global["U1-J"] = keymap.MouseMoveCommand(0,12)
+    # speed up
+    keymap_global["C-U0-H"] = keymap.MouseMoveCommand(-36,0);
+    keymap_global["C-U0-L"] = keymap.MouseMoveCommand(36,0);
+    keymap_global["C-U0-K"] = keymap.MouseMoveCommand(0,-36)
+    keymap_global["C-U0-J"] = keymap.MouseMoveCommand(0,36)
 
-    keymap_global["U1-U3-H"] = keymap.MouseMoveCommand(-36,0);
-    keymap_global["U1-U3-L"] = keymap.MouseMoveCommand(36,0);
-    keymap_global["U1-U3-K"] = keymap.MouseMoveCommand(0,-36)
-    keymap_global["U1-U3-J"] = keymap.MouseMoveCommand(0,36)
+    # mouse button
+    keymap_global["D-U0-V"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-U0-V"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-B"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-U0-B"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-N"] = keymap.MouseButtonDownCommand('right')
+    keymap_global["U-U0-N"] = keymap.MouseButtonUpCommand('right')
 
-    keymap_global["D-U1-R"] = keymap.MouseButtonDownCommand('left')
-    keymap_global["U-U1-R"] = keymap.MouseButtonUpCommand('left')
-    keymap_global["D-U1-N"] = keymap.MouseButtonDownCommand('right')
-    keymap_global["U-U1-N"] = keymap.MouseButtonUpCommand('right')
-    keymap_global["U1-U2-H"] = keymap.MouseHorizontalWheelCommand(-2.0)
-    keymap_global["U1-U2-L"] = keymap.MouseHorizontalWheelCommand(2.0)
-    keymap_global["U1-U2-K"] = keymap.MouseWheelCommand(2.0)
-    keymap_global["U1-U2-J"] = keymap.MouseWheelCommand(-2.0)
+    # mouse scroll
+    keymap_global["S-U0-H"] = keymap.MouseHorizontalWheelCommand(-2.0)
+    keymap_global["S-U0-L"] = keymap.MouseHorizontalWheelCommand(2.0)
+    keymap_global["S-U0-K"] = keymap.MouseWheelCommand(2.0)
+    keymap_global["S-U0-J"] = keymap.MouseWheelCommand(-2.0)
 
-    keymap_global["U0-Space"] = "C-Space"
+    keymap_global["C-Space"] = "C-Space"
     keymap_global["Win-S-CloseBracket"] = "C-Tab"
     keymap_global["Win-S-OpenBracket"] = "C-S-Tab"
     keymap_global["Win-Tab"] = "A-Tab"
+
+    # copy and paste
+    keymap_global["Win-C"] = "C-C"
+    keymap_global["Win-X"] = "C-X"
+    keymap_global["Win-V"] = "C-V"
+    keymap_global["Win-Z"] = "C-Z"
+
+    # control
+    keymap_global["U0-Z"] = "C-Z"
+    keymap_global["U0-T"] = "C-T"
 
     def isNative(wnd):
         if wnd.getProcessName() in ("MobaXterm.exe", "atom.exe", "idea.exe"):
             return True
         return False
 
-    keymap_native = keymap.defineWindowKeymap( check_func=isNative )
-    keymap_native["U0-K"] = "C-K"
-    keymap_native["U0-A"] = "C-A"    
-    keymap_native["U0-E"] = "C-E"
-    keymap_native["U0-Y"] = "C-Y"    
-    keymap_native["U0-V"] = "C-V"
-    keymap_native["U0-T"] = "C-T"
-    keymap_native["U0-C"] = "C-C"
-    keymap_native["U0-L"] = "C-L"
-    keymap_native["U0-X"] = "C-X"
-    keymap_native["U0-B"] = "C-B"
+#    keymap_native = keymap.defineWindowKeymap( check_func=isNative )
+#    keymap_native["C-K"] = "C-K"
+#    keymap_native["C-A"] = "C-A"    
+#    keymap_native["C-E"] = "C-E"
+#    keymap_native["C-Y"] = "C-Y"    
+#    keymap_native["C-V"] = "C-V"
+#    keymap_native["C-T"] = "C-T"
+#    keymap_native["C-C"] = "C-C"
+#    keymap_native["C-L"] = "C-L"
+#    keymap_native["C-X"] = "C-X"
+#    keymap_native["C-B"] = "C-B"
 
     def isWin32(wnd):
         return not isNative(wnd)
 
     keymap_win32 = keymap.defineWindowKeymap( check_func=isWin32 )
-    keymap_win32["U0-A"] = "Home"
-    keymap_win32["U0-E"] = "End"
-    keymap_win32["S-U0-E"] = "S-End"
-    keymap_win32["U0-K"] = "S-End","C-X"
-    keymap_win32["U0-Y"] = "C-V"
+    keymap_win32["C-A"] = "Home"
+    keymap_win32["C-E"] = "End"
+    keymap_win32["S-C-E"] = "S-End"
+    keymap_win32["C-K"] = "S-End","C-X"
+    keymap_win32["C-Y"] = "C-V"
     keymap_win32["A-F"] = "C-Right"
     keymap_win32["A-B"] = "C-Left"
-    keymap_win32["U0-V"] = "PageDown"
+    keymap_win32["C-V"] = "PageDown"
     keymap_win32["A-V"] = "PageUp"
-    keymap_win32["U0-Minus"] = "C-Z"
+    keymap_win32["C-Minus"] = "C-Z"
     keymap_win32["A-W"] = "C-C"
-    keymap_win32["U0-W"] = "C-X"
+    keymap_win32["C-W"] = "C-X"
 
     # for chrome
     keymap_win32["Win-T"] = "C-T"
@@ -169,11 +184,11 @@ def configure(keymap):
         keymap.quote_mark = "> "                                      # Mark for quote pasting
 
         # Keyboard macro
-        keymap_global[ "U0-0" ] = keymap.command_RecordToggle
-        keymap_global[ "U0-1" ] = keymap.command_RecordStart
-        keymap_global[ "U0-2" ] = keymap.command_RecordStop
-        keymap_global[ "U0-3" ] = keymap.command_RecordPlay
-        keymap_global[ "U0-4" ] = keymap.command_RecordClear
+        keymap_global[ "LC-0" ] = keymap.command_RecordToggle
+        keymap_global[ "LC-1" ] = keymap.command_RecordStart
+        keymap_global[ "LC-2" ] = keymap.command_RecordStop
+        keymap_global[ "LC-3" ] = keymap.command_RecordPlay
+        keymap_global[ "LC-4" ] = keymap.command_RecordClear
 
 
     # USER0-F1 : Test of launching application
