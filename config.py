@@ -44,6 +44,8 @@ def configure(keymap):
     keymap_global["U-U0-V"] = keymap.MouseButtonUpCommand('left')
     keymap_global["D-U0-B"] = keymap.MouseButtonDownCommand('left')
     keymap_global["U-U0-B"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-Space"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-U0-Space"] = keymap.MouseButtonUpCommand('left')
     keymap_global["D-U0-N"] = keymap.MouseButtonDownCommand('right')
     keymap_global["U-U0-N"] = keymap.MouseButtonUpCommand('right')
 
@@ -77,7 +79,7 @@ def configure(keymap):
     keymap_global["U0-T"] = "C-T"
 
     def isConsole(wnd):
-        if wnd.getProcessName() in ("MobaXterm.exe", "atom.exe", "idea.exe"):
+        if wnd.getProcessName() in ("MobaXterm.exe")
             return True
         return False
 
@@ -121,6 +123,7 @@ def configure(keymap):
         keymap_notepad[ "C-E" ] = "End"                 # Move to end of line
         keymap_notepad[ "A-F" ] = "C-Right"             # Word right
         keymap_notepad[ "A-B" ] = "C-Left"              # Word left
+
         keymap_notepad[ "C-V" ] = "PageDown"            # Page down
         keymap_notepad[ "A-V" ] = "PageUp"              # page up
         keymap_notepad[ "A-Comma" ] = "C-Home"          # Beginning of the document
