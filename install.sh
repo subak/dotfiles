@@ -37,7 +37,8 @@ brew cask install \
   chatwork \
   skype \
   slack \
-  sketch
+  sketch \
+  sourcetree
 
 
 # KeyBindings
