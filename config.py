@@ -9,11 +9,14 @@ from keyhac import *
 def configure(keymap):
 
     keymap.replaceKey("RAlt","LAlt")
-    keymap.defineModifier("Enter", "User0");
+
+    keymap.defineModifier("Enter", "User0")
+    keymap.defineModifier("Tab", "User1")
 
     keymap_global = keymap.defineWindowKeymap()
 
     keymap_global["O-Enter"] = "Enter"
+    keymap_global["O-Tab"] = "Tab"
 
     keymap_global["RC-P"] = "Up"
     keymap_global["RC-N"] = "Down"
@@ -28,37 +31,37 @@ def configure(keymap):
     keymap_global["RC-D"] = "Delete"
     keymap_global["RC-M"] = "Enter"
 
-    keymap_global["U0-H"] = keymap.MouseMoveCommand(-12,0);
-    keymap_global["U0-L"] = keymap.MouseMoveCommand(12,0);
-    keymap_global["U0-K"] = keymap.MouseMoveCommand(0,-12)
-    keymap_global["U0-J"] = keymap.MouseMoveCommand(0,12)
+    keymap_global["U0-H"] = keymap.MouseMoveCommand(-10,0)
+    keymap_global["U0-L"] = keymap.MouseMoveCommand(10,0)
+    keymap_global["U0-K"] = keymap.MouseMoveCommand(0,-10)
+    keymap_global["U0-J"] = keymap.MouseMoveCommand(0,10)
 
     # speed up
-    keymap_global["C-U0-H"] = keymap.MouseMoveCommand(-36,0);
-    keymap_global["C-U0-L"] = keymap.MouseMoveCommand(36,0);
-    keymap_global["C-U0-K"] = keymap.MouseMoveCommand(0,-36)
-    keymap_global["C-U0-J"] = keymap.MouseMoveCommand(0,36)
+    keymap_global["RC-U0-H"] = keymap.MouseMoveCommand(-40,0)
+    keymap_global["RC-U0-L"] = keymap.MouseMoveCommand(40,0)
+    keymap_global["RC-U0-K"] = keymap.MouseMoveCommand(0,-40)
+    keymap_global["RC-U0-J"] = keymap.MouseMoveCommand(0,40)
 
-    # mouse button
-    keymap_global["D-U0-Space"] = keymap.MouseButtonDownCommand('left')
-    keymap_global["U-U0-Space"] = keymap.MouseButtonUpCommand('left')
-    keymap_global["D-C-U0-Space"] = keymap.MouseButtonDownCommand('left')
-    keymap_global["U-C-U0-Space"] = keymap.MouseButtonUpCommand('left')
     keymap_global["D-U0-N"] = keymap.MouseButtonDownCommand('left')
     keymap_global["U-U0-N"] = keymap.MouseButtonUpCommand('left')
-    keymap_global["D-U0-M"] = keymap.MouseButtonDownCommand('right')
-    keymap_global["U-U0-M"] = keymap.MouseButtonUpCommand('right')
+    keymap_global["D-RC-U0-N"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-RC-U0-N"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-V"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-U0-V"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["D-U0-Space"] = keymap.MouseButtonDownCommand('left')
+    keymap_global["U-U0-Space"] = keymap.MouseButtonUpCommand('left')
+    keymap_global["U0-M"] = keymap.MouseButtonClickCommand('right')
+    keymap_global["RC-U0-M"] = keymap.MouseButtonClickCommand('right')
 
     # mouse scroll
-    keymap_global["S-U0-H"] = keymap.MouseHorizontalWheelCommand(-2.0)
-    keymap_global["S-U0-L"] = keymap.MouseHorizontalWheelCommand(2.0)
-    keymap_global["S-U0-K"] = keymap.MouseWheelCommand(2.0)
-    keymap_global["S-U0-J"] = keymap.MouseWheelCommand(-2.0)
+    keymap_global["U0-U1-H"] = keymap.MouseHorizontalWheelCommand(-2.0)
+    keymap_global["U0-U1-L"] = keymap.MouseHorizontalWheelCommand(2.0)
+    keymap_global["U0-U1-K"] = keymap.MouseWheelCommand(2.0)
+    keymap_global["U0-U1-J"] = keymap.MouseWheelCommand(-2.0)
 
-    keymap_global["C-Space"] = "C-Space"
+    keymap_global["A-Tab"] = "A-Tab"
     keymap_global["Win-S-CloseBracket"] = "C-Tab"
     keymap_global["Win-S-OpenBracket"] = "C-S-Tab"
-    keymap_global["Win-Tab"] = "A-Tab"
 
     # copy and paste
     keymap_global["Win-C"] = "C-C"
@@ -70,7 +73,6 @@ def configure(keymap):
     # for chrome
     keymap_global["Win-T"] = "C-T"
     keymap_global["Win-W"] = "C-W"
-    keymap_global["Win-L"] = "C-L"
     keymap_global["Win-F"] = "C-F"
     keymap_global["Win-G"] = "C-G"
 
@@ -80,7 +82,7 @@ def configure(keymap):
     keymap_global["U0-X"] = "A-X" # for inttelij
 
     def isConsole(wnd):
-        if wnd.getProcessName() in ("MobaXterm.exe"):
+        if wnd.getProcessName() in ("MobaXterm.exe", "ConEmu.exe"):
             return True
         return False
 
@@ -113,7 +115,6 @@ def configure(keymap):
     # both these two keymaps are applied in mixed manner.
     if 0:
         keymap_notepad = keymap.defineWindowKeymap( exe_name="notepad.exe", class_name="Edit" )
-
         # Define Ctrl-X as the first key of multi-stroke keys
         keymap_notepad[ "C-X" ] = keymap.defineMultiStrokeKeymap("C-X")
 
