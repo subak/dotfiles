@@ -8,7 +8,8 @@ brew install \
   caskroom/cask/brew-cask \
   bash-completion \
   homebrew/dupes/screen \
-  stunnel
+  stunnel \
+  mobile-shell
 
 
 # unison
@@ -18,32 +19,38 @@ brew install \
 pip3 install macfsevents
 
 
+# screen exchange
+brew install node
+npm install -g ws
+
+
 brew cask install \
-  google-chrome \
-  karabiner \
-  seil \
-  skitch \
-  textmate \
-  near-lock \
-  sshfs \
-  sequel-pro \
-  teamviewer \
-  dockertoolbox \
-  duet \
-  intellij-idea \
-  evernote \
-  dropbox \
   1password \
   chatwork \
+  dockertoolbox \
+  dropbox \
+  duet \
+  evernote \
+  google-chrome \
+  intellij-idea \
+  karabiner \
+  near-lock \
+  seil \
+  sequel-pro \
+  sketch \
+  skitch \
   skype \
   slack \
-  sketch \
-  sourcetree
+  sourcetree \
+  sshfs \
+  teamviewer \
+  textmate
 
 
 # KeyBindings
 mkdir -pv ${HOME}/Library/KeyBindings
 ln -s ${HOME}/Repos/dotfiles/DefaultKeyBinding.dict ${HOME}/Library/KeyBindings/
+mkdir -pv "${HOME}/Library/Application Support/Textmate"
 ln -s ${HOME}/Repos/dotfiles/DefaultKeyBinding.dict "${HOME}/Library/Application Support/Textmate/KeyBindings.dict"
 
 
@@ -53,7 +60,7 @@ ln -s ${HOME}/Repos/dotfiles/private.xml "${HOME}/Library/Application Support/Ka
 
 
 # IntteliJIDEA
-IDEA_VERSION=15
+IDEA_VERSION=2016.1
 mkdir -pv ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}
 ln -s ${HOME}/Repos/dotfiles/idea/codestyles ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
 ln -s ${HOME}/Repos/dotfiles/idea/colors ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
