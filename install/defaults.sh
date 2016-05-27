@@ -6,8 +6,8 @@
 # Automatically hide or show the Dock （Dock を自動的に隠す）
 defaults write com.apple.dock autohide -bool true
 
-
-
+# Magnificate the Dock （Dock の拡大機能を入にする）
+defaults write com.apple.dock magnification -bool true
 
 ########
 # キーボード
