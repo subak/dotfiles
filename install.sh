@@ -34,6 +34,7 @@ brew cask install \
   google-chrome \
   intellij-idea \
   karabiner \
+  kindle \
   near-lock \
   seil \
   sequel-pro \
@@ -60,7 +61,7 @@ ln -s ${HOME}/Repos/dotfiles/private.xml "${HOME}/Library/Application Support/Ka
 
 
 # IntteliJIDEA
-IDEA_VERSION=2016.1
+IDEA_VERSION=2016.2
 mkdir -pv ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}
 ln -s ${HOME}/Repos/dotfiles/idea/codestyles ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
 ln -s ${HOME}/Repos/dotfiles/idea/colors ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
