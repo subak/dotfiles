@@ -9,7 +9,7 @@ git clone git@bitbucket.org:subak/ca.git ${HOME}/Repos/CA
 
 
 cd ${HOME}/Library
-git clone https://github.com/yascentur/RictyDiminished Fonts
+git clone https://github.com/subak/RictyDiminished Fonts
 
 # Karabiner 起動後に
 ${HOME}/Repos/dotfiles/install/karabiner/apple_magic.sh
