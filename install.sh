@@ -44,7 +44,7 @@ brew cask install \
   slack \
   sourcetree \
   sshfs \
-  teamviewer \
+#  teamviewer \
   textmate
 
 
@@ -61,7 +61,7 @@ ln -s ${HOME}/Repos/dotfiles/private.xml "${HOME}/Library/Application Support/Ka
 
 
 # IntteliJIDEA
-IDEA_VERSION=2016.2
+IDEA_VERSION=2016.4
 mkdir -pv ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}
 ln -s ${HOME}/Repos/dotfiles/idea/codestyles ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
 ln -s ${HOME}/Repos/dotfiles/idea/colors ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
@@ -69,7 +69,7 @@ ln -s ${HOME}/Repos/dotfiles/idea/keymaps ${HOME}/Library/Preferences/IntelliJId
 
 
 # Textmate QuickLook Plugin
-cp -a ${HOME}/Applications/TextMate.app/Contents/Library/QuickLook ${HOME}/Library/
+cp -a /Applications/TextMate.app/Contents/Library/QuickLook ${HOME}/Library/
 
 
 # Git
