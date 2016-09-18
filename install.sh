@@ -44,7 +44,6 @@ brew cask install \
   slack \
   sourcetree \
   sshfs \
-#  teamviewer \
   textmate
 
 
