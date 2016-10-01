@@ -11,10 +11,9 @@ git clone git@bitbucket.org:subak/ca.git ${HOME}/Repos/CA
 cd ${HOME}/Library
 git clone https://github.com/subak/RictyDiminished Fonts
 
-# Karabiner 起動後に
+open /Applications/Karabiner.app
 ${HOME}/Repos/dotfiles/install/karabiner/apple_magic.sh
 ${HOME}/Repos/dotfiles/install/karabiner/hhkb_on_mbp.sh
 
-# Seil起動後に
+open /Applications/Seil.app
 ${HOME}/Repos/dotfiles/install/seil.sh
-
