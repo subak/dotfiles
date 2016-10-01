@@ -5,7 +5,6 @@ set -eu
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install \
-  caskroom/cask/brew-cask \
   bash-completion \
   homebrew/dupes/screen \
   stunnel \
@@ -44,6 +43,7 @@ brew cask install \
   slack \
   sourcetree \
   sshfs \
+  teamviewer \
   textmate
 
 
