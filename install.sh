@@ -23,10 +23,12 @@ brew install node
 npm install -g ws
 
 
+brew install docker-compose docker-machine
+
+
 brew cask install \
   1password \
   chatwork \
-  dockertoolbox \
   dropbox \
   duet \
   evernote \
