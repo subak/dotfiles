@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ${HOME}/Repos/dotfiles/install.sh
+${HOME}/Repos/dotfiles/install/settings.sh
 ${HOME}/Repos/dotfiles/install/ssh_for_local.sh
 ${HOME}/Repos/dotfiles/install/post_install.sh
 ${HOME}/Repos/dotfiles/install/defaults.sh
