@@ -2,48 +2,12 @@
 
 set -eu
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+dir=${HOME}/Repos/dotfiles/install
 
-brew install \
-  bash-completion \
-  homebrew/dupes/screen \
-  stunnel \
-  mobile-shell
-
-
-# unison
-brew install \
-  unison \
-  python3
-pip3 install macfsevents
-
-
-# screen exchange
-brew install node
-npm install -g ws
-
-
-brew install docker-compose docker-machine
-
-
-brew cask install \
-  1password \
-  chatwork \
-  dropbox \
-  duet \
-  evernote \
-  google-chrome \
-  intellij-idea \
-  karabiner \
-  kindle \
-  near-lock \
-  seil \
-  sequel-pro \
-  sketch \
-  skitch \
-  skype \
-  slack \
-  sourcetree \
-  sshfs \
-  teamviewer \
-  textmate
+${dir}/fix_dotfiles_git_remote_origin.sh
+${dir}/brew.sh
+${dir}/settings.sh
+${dir}/ssh_for_local.sh
+${dir}/post_install.sh
+${dir}/defaults.sh
+${dir}/terminal.sh
