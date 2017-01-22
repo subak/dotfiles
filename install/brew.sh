@@ -37,6 +37,7 @@ brew cask install \
   karabiner \
   kindle \
   near-lock \
+  openvpn \
   seil \
   sequel-pro \
   sketch \
