@@ -33,6 +33,7 @@ brew cask install \
   duet \
   evernote \
   google-chrome \
+  insomniax \
   intellij-idea \
   karabiner \
   kindle \
