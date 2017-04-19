@@ -25,27 +25,22 @@ npm install -g ws
 
 brew install docker-compose docker-machine
 
+brew install openvpn
 
 brew cask install \
   1password \
   chatwork \
   dropbox \
-  duet \
   evernote \
   google-chrome \
   insomniax \
   intellij-idea \
-  karabiner \
   kindle \
-  near-lock \
-  openvpn \
-  seil \
   sequel-pro \
   sketch \
   skitch \
   skype \
   slack \
-  sourcetree \
   osxfuse \
   ngrok \
   teamviewer \
