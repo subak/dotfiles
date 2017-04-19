@@ -30,6 +30,7 @@ brew install openvpn
 brew cask install \
   1password \
   chatwork \
+  cmd-eikana \
   dropbox \
   evernote \
   google-chrome \
