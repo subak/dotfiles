@@ -7,10 +7,3 @@ ln -s ${HOME}/Repos/13.rmbp/.profile ${HOME}/.profile
 
 cd ${HOME}/Library
 git clone https://github.com/subak/RictyDiminished Fonts
-
-open /Applications/Karabiner.app
-${HOME}/Repos/dotfiles/install/karabiner/apple_magic.sh
-${HOME}/Repos/dotfiles/install/karabiner/hhkb_on_mbp.sh
-
-open /Applications/Seil.app
-${HOME}/Repos/dotfiles/install/seil.sh
