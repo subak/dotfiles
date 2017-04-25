@@ -22,6 +22,10 @@ ln -s ${HOME}/Repos/dotfiles/idea/keymaps ${HOME}/Library/Preferences/IntelliJId
 cp -a /Applications/TextMate.app/Contents/Library/QuickLook ${HOME}/Library/
 
 
+# eikana
+ln -s ${HOME}/Repos/dotfiles/io.github.imasanari.cmd-eikana.plist ${HOME}/Library/Preferences/io.github.imasanari.cmd-eikana.plist
+
+
 # Git
 git config --global user.email info@subak.jp
 git config --global core.editor nano
