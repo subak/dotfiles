@@ -45,6 +45,7 @@ brew cask install \
   osxfuse \
   ngrok \
   teamviewer \
-  textmate
+  textmate \
+  xld
 
 brew install homebrew/fuse/sshfs
