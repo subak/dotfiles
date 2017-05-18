@@ -5,13 +5,8 @@ mkdir -pv "${HOME}/Library/Application Support/Textmate"
 ln -s ${HOME}/Repos/dotfiles/DefaultKeyBinding.dict "${HOME}/Library/Application Support/Textmate/KeyBindings.dict"
 
 
-# Karabiner
-mkdir -pv ${HOME}/Library/Application\ Support/Karabiner
-ln -s ${HOME}/Repos/dotfiles/private.xml "${HOME}/Library/Application Support/Karabiner/"
-
-
 # IntteliJIDEA
-IDEA_VERSION=2016.3
+IDEA_VERSION=2017.1
 mkdir -pv ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}
 ln -s ${HOME}/Repos/dotfiles/idea/codestyles ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
 ln -s ${HOME}/Repos/dotfiles/idea/colors ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
