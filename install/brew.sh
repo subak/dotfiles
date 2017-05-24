@@ -29,6 +29,7 @@ brew install openvpn
 
 brew cask install \
   1password \
+  charles \
   chatwork \
   cmd-eikana \
   dropbox \
