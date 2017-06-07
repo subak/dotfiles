@@ -34,6 +34,7 @@ brew cask install \
   cmd-eikana \
   dropbox \
   evernote \
+  expandrive \
   google-chrome \
   insomniax \
   intellij-idea \
