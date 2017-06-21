@@ -49,5 +49,3 @@ brew cask install \
   teamviewer \
   textmate \
   xld
-
-brew install homebrew/fuse/sshfs
