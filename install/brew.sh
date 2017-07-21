@@ -23,8 +23,6 @@ brew install node
 npm install -g ws
 
 
-brew install docker-compose docker-machine
-
 brew install openvpn
 
 brew cask install \
@@ -32,6 +30,7 @@ brew cask install \
   charles \
   chatwork \
   cmd-eikana \
+  docker \
   dropbox \
   evernote \
   expandrive \
@@ -44,7 +43,6 @@ brew cask install \
   skitch \
   skype \
   slack \
-  osxfuse \
   ngrok \
   teamviewer \
   textmate \
