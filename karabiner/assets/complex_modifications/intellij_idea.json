@@ -1,0 +1,48 @@
+{
+  "title":  "IntelliJ IDEA",
+  "rules": [
+    {
+      "description": "IntelliJ IDEA",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            },
+            {
+              "key_code": "f"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            },
+            {
+              "key_code": "b"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }    
+  ] 
+}

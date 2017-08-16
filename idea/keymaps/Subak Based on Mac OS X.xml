@@ -68,8 +68,8 @@
     <keyboard-shortcut first-keystroke="ctrl m" />
   </action>
   <action id="EditorEscape">
-    <keyboard-shortcut first-keystroke="escape" />
     <keyboard-shortcut first-keystroke="ctrl g" />
+    <keyboard-shortcut first-keystroke="escape" />
   </action>
   <action id="EditorIndentSelection" />
   <action id="EditorKillRegion">
