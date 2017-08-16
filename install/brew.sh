@@ -37,6 +37,7 @@ brew cask install \
   google-chrome \
   insomniax \
   intellij-idea \
+  karabiner-elements \
   kindle \
   sequel-pro \
   sketch \

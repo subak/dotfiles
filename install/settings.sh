@@ -17,6 +17,10 @@ ln -s ${HOME}/Repos/dotfiles/idea/keymaps ${HOME}/Library/Preferences/IntelliJId
 cp -a /Applications/TextMate.app/Contents/Library/QuickLook ${HOME}/Library/
 
 
+# Karabiner-Element
+mkdir -pv ${HOME}/.config
+ln -s ${HOME}/Repos/dotfiles/karabiner ${HOME}/.config
+
 # eikana
 ln -s ${HOME}/Repos/dotfiles/io.github.imasanari.cmd-eikana.plist ${HOME}/Library/Preferences/io.github.imasanari.cmd-eikana.plist
 
