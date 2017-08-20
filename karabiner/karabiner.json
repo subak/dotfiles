@@ -42,6 +42,53 @@
                 },
                 "rules": [
                     {
+                        "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな）",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_eisuu"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "japanese_kana"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Emacs key bindings [control+keys] (rev 6)",
                         "manipulators": [
                             {
@@ -570,46 +617,252 @@
                         ]
                     },
                     {
-                        "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな）",
+                        "description": "Emacs key bindings [option+keys] (rev 4)",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.gnu\\.Emacs$",
+                                            "^org\\.gnu\\.AquamacsEmacs$",
+                                            "^org\\.gnu\\.Aquamacs$",
+                                            "^org\\.pqrs\\.unknownapp.conkeror$",
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^net\\.sf\\.cord$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.itap-mobile\\.qmote$",
+                                            "^com\\.nulana\\.remotixmac$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.2X\\.Client\\.Mac$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyperterm$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.vim\\.",
+                                            "^com\\.vmware\\.fusion$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.vmware\\.view$",
+                                            "^com\\.parallels\\.desktop$",
+                                            "^com\\.parallels\\.vm$",
+                                            "^com\\.parallels\\.desktop\\.console$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.vmware\\.proxyApp\\.",
+                                            "^com\\.parallels\\.winapp\\.",
+                                            "^org\\.x\\.X11$",
+                                            "^com\\.apple\\.x11$",
+                                            "^org\\.macosforge\\.xquartz\\.X11$",
+                                            "^org\\.macports\\.X11$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "left_command",
+                                    "key_code": "v",
                                     "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ],
                                         "optional": [
-                                            "any"
+                                            "caps_lock",
+                                            "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "japanese_eisuu"
+                                        "key_code": "page_up"
                                     }
                                 ],
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.gnu\\.Emacs$",
+                                            "^org\\.gnu\\.AquamacsEmacs$",
+                                            "^org\\.gnu\\.Aquamacs$",
+                                            "^org\\.pqrs\\.unknownapp.conkeror$",
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^net\\.sf\\.cord$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.itap-mobile\\.qmote$",
+                                            "^com\\.nulana\\.remotixmac$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.2X\\.Client\\.Mac$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyperterm$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.vim\\.",
+                                            "^com\\.vmware\\.fusion$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.vmware\\.view$",
+                                            "^com\\.parallels\\.desktop$",
+                                            "^com\\.parallels\\.vm$",
+                                            "^com\\.parallels\\.desktop\\.console$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.vmware\\.proxyApp\\.",
+                                            "^com\\.parallels\\.winapp\\.",
+                                            "^org\\.x\\.X11$",
+                                            "^com\\.apple\\.x11$",
+                                            "^org\\.macosforge\\.xquartz\\.X11$",
+                                            "^org\\.macports\\.X11$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
-                                    "key_code": "right_command",
+                                    "key_code": "b",
                                     "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ],
                                         "optional": [
-                                            "any"
+                                            "caps_lock",
+                                            "shift"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_command"
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
                                     }
                                 ],
-                                "to_if_alone": [
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
                                     {
-                                        "key_code": "japanese_kana"
+                                        "bundle_identifiers": [
+                                            "^org\\.gnu\\.Emacs$",
+                                            "^org\\.gnu\\.AquamacsEmacs$",
+                                            "^org\\.gnu\\.Aquamacs$",
+                                            "^org\\.pqrs\\.unknownapp.conkeror$",
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^net\\.sf\\.cord$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.itap-mobile\\.qmote$",
+                                            "^com\\.nulana\\.remotixmac$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.2X\\.Client\\.Mac$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyperterm$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.vim\\.",
+                                            "^com\\.vmware\\.fusion$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.vmware\\.view$",
+                                            "^com\\.parallels\\.desktop$",
+                                            "^com\\.parallels\\.vm$",
+                                            "^com\\.parallels\\.desktop\\.console$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.vmware\\.proxyApp\\.",
+                                            "^com\\.parallels\\.winapp\\.",
+                                            "^org\\.x\\.X11$",
+                                            "^com\\.apple\\.x11$",
+                                            "^org\\.macosforge\\.xquartz\\.X11$",
+                                            "^org\\.macports\\.X11$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^org\\.gnu\\.Emacs$",
+                                            "^org\\.gnu\\.AquamacsEmacs$",
+                                            "^org\\.gnu\\.Aquamacs$",
+                                            "^org\\.pqrs\\.unknownapp.conkeror$",
+                                            "^com\\.microsoft\\.rdc$",
+                                            "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^com\\.microsoft\\.rdc\\.osx\\.beta$",
+                                            "^net\\.sf\\.cord$",
+                                            "^com\\.thinomenon\\.RemoteDesktopConnection$",
+                                            "^com\\.itap-mobile\\.qmote$",
+                                            "^com\\.nulana\\.remotixmac$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer$",
+                                            "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.2X\\.Client\\.Mac$",
+                                            "^com\\.apple\\.Terminal$",
+                                            "^com\\.googlecode\\.iterm2$",
+                                            "^co\\.zeit\\.hyperterm$",
+                                            "^co\\.zeit\\.hyper$",
+                                            "^org\\.vim\\.",
+                                            "^com\\.vmware\\.fusion$",
+                                            "^com\\.vmware\\.horizon$",
+                                            "^com\\.vmware\\.view$",
+                                            "^com\\.parallels\\.desktop$",
+                                            "^com\\.parallels\\.vm$",
+                                            "^com\\.parallels\\.desktop\\.console$",
+                                            "^org\\.virtualbox\\.app\\.VirtualBoxVM$",
+                                            "^com\\.vmware\\.proxyApp\\.",
+                                            "^com\\.parallels\\.winapp\\.",
+                                            "^org\\.x\\.X11$",
+                                            "^com\\.apple\\.x11$",
+                                            "^org\\.macosforge\\.xquartz\\.X11$",
+                                            "^org\\.macports\\.X11$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "option"
+                                        ],
+                                        "optional": [
+                                            "caps_lock"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_forward",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
