@@ -47,12 +47,10 @@
     <keyboard-shortcut first-keystroke="ctrl m" />
   </action>
   <action id="EditorCodeBlockEnd">
-    <keyboard-shortcut first-keystroke="meta close_bracket" />
     <keyboard-shortcut first-keystroke="ctrl alt f" />
   </action>
   <action id="EditorCodeBlockEndWithSelection" />
   <action id="EditorCodeBlockStart">
-    <keyboard-shortcut first-keystroke="meta open_bracket" />
     <keyboard-shortcut first-keystroke="ctrl alt b" />
   </action>
   <action id="EditorCodeBlockStartWithSelection" />
@@ -71,7 +69,9 @@
     <keyboard-shortcut first-keystroke="ctrl g" />
     <keyboard-shortcut first-keystroke="escape" />
   </action>
-  <action id="EditorIndentSelection" />
+  <action id="EditorIndentSelection">
+    <keyboard-shortcut first-keystroke="meta close_bracket" />
+  </action>
   <action id="EditorKillRegion">
     <keyboard-shortcut first-keystroke="ctrl w" />
   </action>
@@ -143,6 +143,9 @@
   <action id="EditorToggleStickySelection">
     <keyboard-shortcut first-keystroke="ctrl space" />
     <keyboard-shortcut first-keystroke="shift ctrl 2" />
+  </action>
+  <action id="EditorUnindentSelection">
+    <keyboard-shortcut first-keystroke="meta open_bracket" />
   </action>
   <action id="EditorUp">
     <keyboard-shortcut first-keystroke="up" />
