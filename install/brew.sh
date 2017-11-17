@@ -6,10 +6,10 @@ set -eu
 
 brew install \
   bash-completion \
-  homebrew/dupes/screen \
-  stunnel \
-  mobile-shell
-
+  mobile-shell \
+  openvpn \
+  screen \
+  stunnel
 
 # unison
 brew install \
@@ -17,23 +17,17 @@ brew install \
   python3
 pip3 install macfsevents
 
-
 # screen exchange
 brew install node
 npm install -g ws
-
-
-brew install openvpn
 
 brew cask install \
   1password \
   charles \
   chatwork \
-  cmd-eikana \
   docker \
   dropbox \
   evernote \
-  expandrive \
   google-chrome \
   insomniax \
   intellij-idea \
@@ -44,7 +38,6 @@ brew cask install \
   skitch \
   skype \
   slack \
-  ngrok \
   teamviewer \
   textmate \
   xld
