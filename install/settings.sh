@@ -6,7 +6,7 @@ ln -s ${HOME}/Repos/dotfiles/DefaultKeyBinding.dict "${HOME}/Library/Application
 
 
 # IntteliJIDEA
-IDEA_VERSION=2017.2
+IDEA_VERSION=2017.3
 mkdir -pv ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}
 ln -s ${HOME}/Repos/dotfiles/idea/codestyles ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
 ln -s ${HOME}/Repos/dotfiles/idea/colors ${HOME}/Library/Preferences/IntelliJIdea${IDEA_VERSION}/
